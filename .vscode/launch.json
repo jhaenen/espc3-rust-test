@@ -15,9 +15,11 @@
         "interface": "jtag",
         "svdFile": "esp32c3.svd",
         "toolchainPrefix": "riscv32-esp-elf",
-        "openOCDPreConfigLaunchCommands": ["set ESP_RTOS none"],
-        "serverpath": "/usr/bin/openocd",
+        // "openOCDPreConfigLaunchCommands": ["set ESP_RTOS none"],
+        "serverpath": "openocd-esp32",
+        "searchDir": ["/var/local/openocd-esp32/"],
         "configFiles": ["board/esp32c3-builtin.cfg"],
+        "gdbPath": "riscv32-esp-elf-gdb",
         "overrideAttachCommands": [
           "set remote hardware-watchpoint-limit 2",
           "mon halt",
